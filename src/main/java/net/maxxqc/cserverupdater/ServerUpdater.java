@@ -1,9 +1,16 @@
 package net.maxxqc.cserverupdater;
 
+import javax.swing.*;
+
 public class ServerUpdater
 {
     public static void main(String[] args)
     {
-        System.out.println("Hello world!");
+        SwingUtilities.invokeLater(() ->
+        {
+            ServerUpdaterApp app = new ServerUpdaterApp();
+            app.setVisible(true);
+            app.toFront();
+        });
     }
 }
